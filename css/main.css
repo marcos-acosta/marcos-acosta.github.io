@@ -1,0 +1,9 @@
+body {
+  font-family: 'Montserrat';
+}
+
+.mainTitle {
+  font-size: 2vw;
+  text-align: center;
+  width: 100vw;
+}
