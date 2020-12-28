@@ -1,9 +1,88 @@
 body {
+  font-family: 'Almarai', sans-serif;
+  color: rgb(27, 27, 27);
+}
+
+canvas {
   font-family: 'Montserrat';
 }
 
+.commonTable {
+  padding-top: 2vw;
+}
+
+.smallLeftSide {
+  width: 20vw;
+}
+
+#marcosImg {
+  width: 15vw;
+  height: 15vw;
+  margin-top: 2vw;
+}
+
 .mainTitle {
-  font-size: 2vw;
+  font-size: 3vw;
+}
+
+.ptsMainCanvas {
+  height: 40vw;
+}
+
+.codeBlock {
+  background-color: #e7e4cf;
+  color: rgb(24, 24, 24);
+  /* background-color: #222222;
+  color: rgb(255, 255, 255); */
+  padding: 2vw;
+  font-family: "Roboto Mono";
+}
+
+#aboutMe {
+  width: 100%;
+  margin-top: 6.5vw;
+}
+
+.green {
+  color: rgb(44, 155, 44);
+}
+
+.red {
+  color: rgb(201, 110, 82);
+}
+
+.lightBlue {
+  color: rgb(108, 149, 224);
+}
+
+.darkBlue {
+  color: rgb(84, 103, 146);
+}
+
+a {
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+}
+
+a:hover {
+  color: rgb(109, 109, 109);
+}
+
+a.white {
+  color: #e7e4cf;
+}
+
+a.white:hover {
+  color: #ddd7a8;
+}
+
+.caption {
+  width: 100%;
+  font-size: 1vw;
   text-align: center;
-  width: 100vw;
+  font-style: italic;
+}
+
+.centerContent {
+  text-align: center;
 }

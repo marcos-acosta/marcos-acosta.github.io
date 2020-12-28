@@ -13,13 +13,49 @@
   <!-- Our CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" href="src/cactus.png">
 </head>
 
 <body>
-  <div class="mainTitle mt-2">
-    Coming soon!
+  <div id="pt" class="ptsMainCanvas">
   </div>
+  <div class="container">
+    <div class="row commonTable">
+      <div class="col-3 smallLeftSide centerContent">
+        <div class="mainTitle">
+          About me
+          <br>
+          <img src="src/marcos_cactus.jpg" id="marcosImg">
+          <br>
+          <div class="caption mt-2">Cacti are man's second best friend</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="codeBlock" id="aboutMe">
+          <span class="green">// Dear employers: thanks for visiting!</span><br>
+          <span class="darkBlue">let</span> <span class="lightBlue">aboutMe</span> = {<br>
+          &emsp;<span class="lightBlue">name</span>: <span class="red">'Marcos Acosta'</span>,<br>
+          &emsp;<span class="lightBlue">college</span>: <span class="red">'Harvey Mudd College'</span>,<br>
+          &emsp;<span class="lightBlue">major</span>: <span class="red">'Computer Science'</span>,<br>
+          &emsp;<span class="lightBlue">blurb</span>:
+          `I suppose there's a lot that I could draw from my resume to put here, but the most fundamental thing, I believe, is
+          that I love to code. It started with programming Pong on my TI-84 calculator to pass the time in high school bio, then 
+          continued with CS courses, and by the time I wrote a rudimentary landmark-based GPS for freshmen navigating my high school, 
+          I knew CS was what I wanted to pursue. While I have a particular excitement for machine learning (given the progress it's 
+          seen in the past decades), I work hard to be up-to-date and proficient in other fields like web development, cloud computing 
+          (e.g. AWS), and front-end development. I showcase a couple of my favorite projects here for recruiters / employers. Please don't 
+          hesitate to reach out to me via email (<a href="mailto:mdacosta@g.hmc.edu">mdacosta@g.hmc.edu</a>)!`
+          <br>
+          };
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <hr>
+
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- pts.js -->
@@ -29,10 +65,10 @@
   <!-- Our JS file -->
   <script src="js/main.js"></script>
 
-  <!-- <script>
+  <script>
     window.demoDescription = "Move the pointer to creates confetti. A simple example to show how to extend Pt class.";
 
-    Pts.quickStart( "#pt", "#fe3" );
+    let run = Pts.quickStart( "#pt", "#e7e4cf" );
 
     //// Demo code starts (anonymous function wrapper is optional) ---
 
@@ -44,7 +80,7 @@
       class Confetti extends Pt {
         constructor( ...args ) {
           super( ...args );
-          this.color = ["#f03", "#09f", "#0c6", "#fff"][ Util.randomInt(4) ];
+          this.color = ["#f03", "#09f", "#0c6", "#fff", "#fff954"][ Util.randomInt(5) ];
           this.size = Math.random()*7+2;
           this.angle = Math.random() * Const.two_pi;
           this.dir = (Math.random() > 0.5) ? 1 : -1;
@@ -93,7 +129,14 @@
 
       space.bindMouse().bindTouch().play();
 
+
+    
+      run( (time, ftime)  => {
+        let rect = Rectangle.fromCenter( space.center, 300 );
+        form.font(36, "","",1,"Almarai, sans-serif").fillOnly("rgb(24, 24, 24)").alignText("center").paragraphBox( rect, "Hi! I'm Marcos.", 1.5, "middle" );
+      });
+
     })();
-  </script> -->
+  </script>
 </body>
 </html>
