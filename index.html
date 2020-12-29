@@ -19,9 +19,10 @@
 </head>
 
 <body>
+  <div class="banner">This page is still a work in progress :)</div>
   <div id="pt" class="ptsMainCanvas">
   </div>
-  <div class="container">
+  <div class="mainContainer">
     <div class="row commonTable">
       <div class="col-3 smallLeftSide centerContent">
         <div class="mainTitle">
@@ -66,8 +67,6 @@
   <script src="js/main.js"></script>
 
   <script>
-    window.demoDescription = "Move the pointer to creates confetti. A simple example to show how to extend Pt class.";
-
     let run = Pts.quickStart( "#pt", "#e7e4cf" );
 
     //// Demo code starts (anonymous function wrapper is optional) ---
@@ -124,6 +123,8 @@
         } 
       });
       
+      console.log(space);
+      
       //// ----
       
 
@@ -132,7 +133,7 @@
 
     
       run( (time, ftime)  => {
-        let rect = Rectangle.fromCenter( space.center, 300 );
+        let rect = Rectangle.fromCenter( new Pt([space.width / 2, 300]), 300 );
         form.font(36, "","",1,"Almarai, sans-serif").fillOnly("rgb(24, 24, 24)").alignText("center").paragraphBox( rect, "Hi! I'm Marcos.", 1.5, "middle" );
       });
 

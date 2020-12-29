@@ -7,6 +7,14 @@ canvas {
   font-family: 'Montserrat';
 }
 
+.mainContainer {
+  background-color: white;
+  width: 100vw;
+  position: absolute;
+  top: 40vw;
+  padding: 2vw;
+}
+
 .commonTable {
   padding-top: 2vw;
 }
@@ -26,7 +34,7 @@ canvas {
 }
 
 .ptsMainCanvas {
-  height: 40vw;
+  height: 100vw;
 }
 
 .codeBlock {
@@ -85,4 +93,11 @@ a.white:hover {
 
 .centerContent {
   text-align: center;
+}
+
+.banner {
+  text-align: center;
+  height: 2vw;
+  color: white;
+  background-color: rgb(36, 36, 36);
 }
