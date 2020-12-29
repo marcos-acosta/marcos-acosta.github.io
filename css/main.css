@@ -1,6 +1,7 @@
 body {
   font-family: 'Almarai', sans-serif;
   color: rgb(27, 27, 27);
+  background-color: #e7e4cf;
 }
 
 canvas {
@@ -10,9 +11,9 @@ canvas {
 .mainContainer {
   background-color: white;
   width: 100vw;
-  position: absolute;
-  top: 40vw;
   padding: 2vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2vw;
 }
 
 .commonTable {
@@ -27,6 +28,7 @@ canvas {
   width: 15vw;
   height: 15vw;
   margin-top: 2vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mainTitle {
@@ -34,7 +36,7 @@ canvas {
 }
 
 .ptsMainCanvas {
-  height: 100vw;
+  height: 40vw;
 }
 
 .codeBlock {
@@ -44,6 +46,7 @@ canvas {
   color: rgb(255, 255, 255); */
   padding: 2vw;
   font-family: "Roboto Mono";
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #aboutMe {
@@ -77,17 +80,16 @@ a:hover {
 }
 
 a.white {
-  color: #e7e4cf;
+  color: #f1f1f1;
 }
 
 a.white:hover {
-  color: #ddd7a8;
+  color: #ffffff;
 }
 
 .caption {
   width: 100%;
   font-size: 1vw;
-  text-align: center;
   font-style: italic;
 }
 
@@ -100,4 +102,32 @@ a.white:hover {
   height: 2vw;
   color: white;
   background-color: rgb(36, 36, 36);
+}
+
+.cardTitle {
+  font-size: 2vw;
+}
+
+.projectSquare {
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e7e4cf;
+  padding: 2vw;
+  margin-top: 2vw;
+}
+
+.visitButton {
+  margin-right: 1vw;
+  float: right;
+}
+
+.cardImage {
+  height: 30vw;
+}
+
+.pdf {
+  width: 80%;
+  height: 40vw;
+  margin-left: 10%;
 }

@@ -19,12 +19,12 @@
 </head>
 
 <body>
-  <div class="banner">This page is still a work in progress :)</div>
+  <!-- <div class="banner">This page is still a work in progress :)</div> -->
   <div id="pt" class="ptsMainCanvas">
   </div>
   <div class="mainContainer">
     <div class="row commonTable">
-      <div class="col-3 smallLeftSide centerContent">
+      <div class="col-3 smallLeftSide">
         <div class="mainTitle">
           About me
           <br>
@@ -40,10 +40,11 @@
           &emsp;<span class="lightBlue">name</span>: <span class="red">'Marcos Acosta'</span>,<br>
           &emsp;<span class="lightBlue">college</span>: <span class="red">'Harvey Mudd College'</span>,<br>
           &emsp;<span class="lightBlue">major</span>: <span class="red">'Computer Science'</span>,<br>
+          &emsp;<span class="lightBlue">languages</span>: [<span class="red">'Python'</span>, <span class="red">'Java'</span>, <span class="red">'Javascript/Typescript'</span>, <span class="red">'HTML/CSS'</span>, <span class="red">'C++'</span>],<br>
           &emsp;<span class="lightBlue">blurb</span>:
-          `I suppose there's a lot that I could draw from my resume to put here, but the most fundamental thing, I believe, is
+          `I suppose there's a lot that I could draw from my resume to put here, but the most fundamental thing to include, I believe, is
           that I love to code. It started with programming Pong on my TI-84 calculator to pass the time in high school bio, then 
-          continued with CS courses, and by the time I wrote a rudimentary landmark-based GPS for freshmen navigating my high school, 
+          continued with CS courses, and by the time I wrote a rudimentary landmark-based "GPS" for freshmen navigating my high school, 
           I knew CS was what I wanted to pursue. While I have a particular excitement for machine learning (given the progress it's 
           seen in the past decades), I work hard to be up-to-date and proficient in other fields like web development, cloud computing 
           (e.g. AWS), and front-end development. I showcase a couple of my favorite projects here for recruiters / employers. Please don't 
@@ -54,8 +55,139 @@
       </div>
     </div>
   </div> 
-  
-  <hr>
+
+  <div class="mainContainer">
+    <div class="row commonTable">
+      <div class="col smallLeftSide">
+        <div class="mainTitle">
+          CV
+        </div>
+        <iframe src="src/cv.pdf" class="pdf"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="mainContainer">
+    <div class="row commonTable">
+      <div class="col smallLeftSide">
+        <div class="mainTitle">
+          Projects
+        </div>
+        
+        <div class="projectSquare">
+          <div class="cardTitle">
+            Metaschedule 🗓️
+            <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/metaschedule" target="blank">
+              GitHub
+            </a>
+            <a class="btn btn-primary visitButton" href="http://metaschedule.netlify.com/" target="blank">
+              Website
+            </a>
+          </div>
+          <hr>
+          <p>
+            Metaschedule started as a frustration; namely, 
+            a frustration with how difficult it was to plan courses at my college consortium. There already exists a tool 
+            for course planning called <a href="https://hyperschedule.io" target="_blank">Hyperschedule</a>, but it requires
+            users to specify which section of a course they wanted to take. For many students (myself included), knowing which
+            sections to take to avoid conflicts <i>is</i> the problem, so Hyperschedule isn't particularly useful. If I had a 
+            nickel for every time my course registration plan was torn asunder by courses filling up at the last moment, I would 
+            have 20 cents.
+          </p>
+          <p>
+            Not enough to pay for laundry, but enough for me to make this scheduler tool that allows users to add courses they're
+            interested in and explore the different non-conflicting permutations of those courses' sections, as well as provide 
+            options for filtering specific sections and adding custom commitments. 
+          </p>
+          <p>
+            The course data comes from an <a href="https://hyperschedule.herokuapp.com/api/v3/courses?school=hmc" target="_blank">
+            API endpoint</a> provided by Hyperschedule, helpfully enough, so credit where credit is due :)
+          </p>
+          <p>
+            Developing Metaschedule taught me a <i>lot</i> about web development (and equally as much about what I still have to learn)
+            but, more importantly, it taught me that I can learn new and exciting skills by jumping in headfirst, asking around for help,
+            and getting feedback on where to improve. 
+          </p>
+          <p>
+            <i>Fun fact: at the bottom of the HTML file is an ASCII representation of my roommate.</i>
+          </p>
+          <hr>
+          <div class="centerContent">
+            <img src="src/metaschedule.png" class="cardImage">
+          </div>
+        </div>
+
+        <div class="projectSquare">
+          <div class="cardTitle">
+            P-ai <span class="text-muted">&&</span> Artificially Generated Jazz 🎷
+            <a class="btn btn-dark visitButton" href="https://github.com/p-ai-org/p-jazz" target="blank">
+              GitHub
+            </a>
+            <a class="btn btn-primary visitButton" href="https://soundcloud.com/pjazz-marms" target="blank">
+              Soundcloud
+            </a>
+          </div>
+          <hr>
+          <p>
+            I joined <a href="https://www.p-ai.org/" target="blank">P-ai</a> as a freshman, the year it was founded. Its vision was to become the incubator for all things machine
+            learning at the consortium, and it's done exactly that. In my first year, I was accepted to a project team performing
+            sentiment analysis on Tweets about #WeWork and I took on a second project in the spring to help a senior with his research
+            on computationally lightweight facial recognition.
+          </p>
+          <p>
+            Coming into my freshman year, I had no experience with machine learning at all, which is why I spent a disproportionate
+            amount of my time on these projects, reading technical articles, attending machine learning workshops after class, and
+            working on side projects to get myself up to speed.
+          </p>
+          <p>
+            After my first year, I was invited to join the leadership team. In a promising new organization with over 100
+            members, joining the leadership has been both fast-paced and exciting, letting me take on a wide number of
+            responsibilities like hosting ML workshops, helping organize a career panel, overseeing our project teams, and
+            finding corporate partners.
+          </p>
+          <p>
+            Most personally interesting to me, I got to lead a project team of my own in generating artificial jazz! Dubbed p-jazz
+            (to match the theme), my team and I have been working on two different avenues of training models to replicate jazz piano
+            from MIDI files: splitting music into chunks (phrases) and training an encoder-decoder model to "translate" from one phrase
+            to the next, and finetuning GPT-2 to replicate the MIDI in text form.
+          </p>
+          <p>
+            The project is still ongoing, but our GitHub is here. We've also had some preliminary results (music), but we're
+            actively working on ideas for improvements, like training harmony and melody in tandem, and using transfer learning
+            from classical music to jazz. In any case, ML + music is a dream come true for me.
+          </p>
+          <hr>
+          <div class="centerContent">
+            <img src="src/5chack.jpg" class="cardImage">
+            <img src="src/working.png" class="cardImage">
+          </div>
+        </div>
+
+        <div class="projectSquare">
+          <div class="cardTitle">
+            Ampersand 🕹️
+            <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/ampersand" target="blank">
+              GitHub
+            </a>
+            <a class="btn btn-primary visitButton" href="https://ampersand.netlify.app/" target="blank">
+              Website
+            </a>
+          </div>
+          <hr>
+          <p>
+            There actually isn't much to say for this one. Ampersand is a game I originally programmed on a school computer 
+            in my free time during a high school sophomore year Java course. At one point in college I found myself with a 
+            bit of free time again, so I figured, why not program it again, but on a nice frontend? And that's exactly what I 
+            did. Sometimes you just want to code, what can I say?
+          </p>
+          <hr>
+          <div class="centerContent">
+            <img src="src/ampersand.png" class="cardImage">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
