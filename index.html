@@ -76,6 +76,44 @@
         
         <div class="projectSquare">
           <div class="cardTitle">
+            American Sign Language (ASL) Translation 🧏
+          </div>
+          <hr>
+          <p>
+            Ever since I noticed the sign language alphabet on the last few pages of my student handbook sometime in fourth grade, 
+            learning ASL has been a lifelong goal of mine. About a decade later, I've finally come back to learn it. In a <i>eureka</i>
+            moment, I realized that I could develop two skills at once: ASL and ML. 
+          </p>
+          <p>
+            ASL translation has been picking up speed over the past few years, but the technology is still underdeveloped compared to
+            written/spoken language translation. Google has made perhaps the most significant progress, but given the fact that 
+            ASL involves subtle and rapid finger movement, body movement, facial expressions, and its own rules of grammar, it's by no 
+            means a closed problem. While I wouldn't claim to have the means to compete with a team of PhD-holding researchers at Google, I'm approaching the 
+            problem nonetheless because I believe ASL translation deserves more research and hacking. 
+          </p>
+          <p>
+            At the moment I'm using <a href="https://google.github.io/mediapipe/solutions/hands#python-solution-api" target="blank">Google's MediaPipe</a>
+            to perform the hand landmark detection, and at the moment I'm only training models on static, one-hand signs, like 24 of the 26 letters (J and Z require
+            motion). I experimented with both a neural network and a support vector classifier, and while I expected the SVC to outperform the NN due to the way SVMs
+            construct their decision boundaries, the SVC was actually more prone to confuse letters (e.g. E and O). That being said, I'll come back to 
+            the SVC to determine if further optimization could improve the results.
+          </p>
+          <p>
+            The next big step is to add a temporal aspect to the classification. This will be a huge shift, so I'll have to think very carefully about 
+            the architecture. A key issue would be determining when one sign stops and the next begins; native signers transition seamlessly between signs, 
+            much like we don't pause between words when we speak. So, I should look into how speech-to-text translation works for insight. I'll keep this page updated!
+          </p>
+          <hr>
+          <div class="centerContent">
+            <video autoplay loop muted id="workingVideo" class="cardImage">
+              <source src="src/helloworld.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="projectSquare">
+          <div class="cardTitle">
             Metaschedule 🗓️
             <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/metaschedule" target="blank">
               GitHub
@@ -113,7 +151,11 @@
           </p>
           <hr>
           <div class="centerContent">
-            <img src="src/metaschedule.png" class="cardImage">
+            
+            <video autoplay loop muted id="workingVideo" class="cardImage">
+              <source src="src/meta.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
@@ -185,7 +227,10 @@
           </p>
           <hr>
           <div class="centerContent">
-            <img src="src/ampersand.png" class="cardImage">
+            <video autoplay loop muted id="workingVideo" class="cardImage">
+              <source src="src/amper.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

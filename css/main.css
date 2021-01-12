@@ -111,10 +111,14 @@ a.white:hover {
 .projectSquare {
   width: 90%;
   margin-left: 5%;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #e7e4cf;
   padding: 2vw;
   margin-top: 2vw;
+}
+
+.projectSquare:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.19);
 }
 
 .visitButton {
