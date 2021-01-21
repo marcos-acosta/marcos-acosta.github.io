@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("#homeButton").on("click", () => {
     $("#projectButton").removeClass("active");
     $("#homeButton").addClass("active");
-    let projects = document.getElementById("aboutMe")
+    let projects = document.getElementById("aboutMeContainer")
     projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   });
   $("#projectButton").on("click", () => {
