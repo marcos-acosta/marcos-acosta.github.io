@@ -19,18 +19,29 @@
 </head>
 
 <body>
-  <!-- <div class="banner">This page is still a work in progress :)</div> -->
-  <div id="pt" class="ptsMainCanvas">
-  </div>
-  <div class="mainContainer">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark customNav">
+    <div class="navbar-brand"><b>&#60 Meet Marcos &#62</b></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <div class="nav-item nav-link active pointerHover" id="homeButton">About Me</div>
+        <div class="nav-item nav-link pointerHover" id="projectButton">Projects</div>
+        <!-- <a class="nav-item nav-link" href="#">Resume</a> -->
+      </div>
+    </div>
+  </nav>
+  <div id="pt" class="ptsMainCanvas"></div>
+  <div class="mainContainer" id="aboutMe">
     <div class="row commonTable">
       <div class="col-3 smallLeftSide">
         <div class="mainTitle">
           About me
           <br>
-          <img src="src/marcos_nice.png" id="marcosImg">
+          <img src="src/marcos_nice.png" id="marcosImg" class="circleImage">
           <br>
-          <div class="caption mt-2">Cacti are man's second best friend</div>
+          <!-- <div class="caption mt-2">Nice to meet you!</div> -->
         </div>
       </div>
       <div class="col">
@@ -48,7 +59,8 @@
           I knew CS was what I wanted to pursue. While I have a particular excitement for machine learning (given the progress it's 
           seen in the past decades), I work hard to be up-to-date and proficient in other fields like web development, cloud computing 
           (e.g. AWS), and front-end development. I showcase a couple of my favorite projects here for recruiters / employers. Please don't 
-          hesitate to reach out to me via email (<a href="mailto:mdacosta@g.hmc.edu">mdacosta@g.hmc.edu</a>)!`
+          hesitate to reach out!`,<br>
+          &emsp;<span class="lightBlue">contact</span>: <span class="red">'<a class="red" href="mailto:mdacosta@g.hmc.edu">mdacosta@g.hmc.edu</a>'</span>
           <br>
           };
         </div>
@@ -56,7 +68,7 @@
     </div>
   </div> 
 
-  <div class="mainContainer">
+  <div class="mainContainer" id="projects">
     <div class="row commonTable">
       <div class="col smallLeftSide">
         <div class="mainTitle">
@@ -249,7 +261,7 @@
       class Confetti extends Pt {
         constructor( ...args ) {
           super( ...args );
-          this.color = ["#f03", "#09f", "#fff", "#fff954"][ Util.randomInt(5) ];
+          this.color = ["#85C1F5", "#fff", "#F4E770", "#7FCA9F", "#4A789C"][ Util.randomInt(5) ];
           this.size = Math.random()*7+2;
           this.angle = Math.random() * Const.two_pi;
           this.dir = (Math.random() > 0.5) ? 1 : -1;
@@ -292,8 +304,6 @@
           if (type == "move") pts.push( new Confetti(px, py) );  
         } 
       });
-      
-      console.log(space);
       
       //// ----
       

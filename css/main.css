@@ -16,6 +16,7 @@ canvas {
   padding: 2vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 2vw;
+  border-radius: 1vw;
 }
 
 .commonTable {
@@ -49,6 +50,7 @@ canvas {
   padding: 2vw;
   font-family: "Roboto Mono";
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1vw;
 }
 
 #aboutMe {
@@ -89,6 +91,14 @@ a.white:hover {
   color: #ffffff;
 }
 
+a.red {
+  color: rgb(201, 110, 82);
+}
+
+a.red:hover {
+  color: rgb(204, 97, 65);
+}
+
 .caption {
   width: 100%;
   font-size: 1vw;
@@ -117,6 +127,7 @@ a.white:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2vw;
   margin-top: 2vw;
+  border-radius: 1vw;
 }
 
 .projectSquare:hover {
@@ -128,6 +139,10 @@ a.white:hover {
   float: right;
 }
 
+.circleImage {
+  border-radius: 50%;
+}
+
 .cardImage {
   height: 30vw;
 }
@@ -136,4 +151,18 @@ a.white:hover {
   width: 80%;
   height: 40vw;
   margin-left: 10%;
+}
+
+.customNav {
+  padding: 1vw;
+  padding-left: 2vw;
+  color: white;
+}
+
+.navText {
+  font-size: 1.5vw;
+}
+
+.pointerHover {
+  cursor: pointer;
 }
