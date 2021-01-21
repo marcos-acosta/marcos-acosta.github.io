@@ -28,7 +28,7 @@
         <div class="mainTitle">
           About me
           <br>
-          <img src="src/marcos_cactus.jpg" id="marcosImg">
+          <img src="src/marcos_nice.png" id="marcosImg">
           <br>
           <div class="caption mt-2">Cacti are man's second best friend</div>
         </div>
@@ -55,17 +55,6 @@
       </div>
     </div>
   </div> 
-
-  <div class="mainContainer">
-    <div class="row commonTable">
-      <div class="col smallLeftSide">
-        <div class="mainTitle">
-          CV
-        </div>
-        <iframe src="src/cv.pdf" class="pdf"></iframe>
-      </div>
-    </div>
-  </div>
 
   <div class="mainContainer">
     <div class="row commonTable">
@@ -247,7 +236,8 @@
   <script src="js/main.js"></script>
 
   <script>
-    let run = Pts.quickStart( "#pt", "#e7e4cf" );
+    // let run = Pts.quickStart( "#pt", "#e7e4cf" );
+    let run = Pts.quickStart("#pt", "#fb7463");
 
     //// Demo code starts (anonymous function wrapper is optional) ---
 
@@ -259,7 +249,7 @@
       class Confetti extends Pt {
         constructor( ...args ) {
           super( ...args );
-          this.color = ["#f03", "#09f", "#0c6", "#fff", "#fff954"][ Util.randomInt(5) ];
+          this.color = ["#f03", "#09f", "#fff", "#fff954"][ Util.randomInt(5) ];
           this.size = Math.random()*7+2;
           this.angle = Math.random() * Const.two_pi;
           this.dir = (Math.random() > 0.5) ? 1 : -1;
@@ -314,7 +304,7 @@
     
       run( (time, ftime)  => {
         let rect = Rectangle.fromCenter( new Pt([space.width / 2, 300]), 300 );
-        form.font(36, "","",1,"Almarai, sans-serif").fillOnly("rgb(24, 24, 24)").alignText("center").paragraphBox( rect, "Hi! I'm Marcos.", 1.5, "middle" );
+        form.font(36, "","",1,"Almarai, sans-serif").fillOnly("#ffffff").alignText("center").paragraphBox( rect, "Hi! I'm Marcos.", 1.5, "middle" );
       });
 
     })();

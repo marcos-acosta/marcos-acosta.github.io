@@ -1,7 +1,8 @@
 body {
   font-family: 'Almarai', sans-serif;
   color: rgb(27, 27, 27);
-  background-color: #e7e4cf;
+  /* background-color: #e7e4cf; */
+  background-color: #fb7463;
 }
 
 canvas {
@@ -9,8 +10,9 @@ canvas {
 }
 
 .mainContainer {
-  background-color: white;
-  width: 100vw;
+  background-color: rgb(250, 250, 250);
+  width: 98vw;
+  margin-left: 1vw;
   padding: 2vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 2vw;
@@ -40,7 +42,7 @@ canvas {
 }
 
 .codeBlock {
-  background-color: #e7e4cf;
+  background-color: #ffffff;
   color: rgb(24, 24, 24);
   /* background-color: #222222;
   color: rgb(255, 255, 255); */
