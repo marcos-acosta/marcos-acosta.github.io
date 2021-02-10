@@ -6,6 +6,8 @@ body {
 }
 
 canvas {
+  position: absolute;
+  top: 0;
   font-family: 'Montserrat';
 }
 
@@ -57,6 +59,43 @@ canvas {
   width: 100%;
   /* margin-top: 6.5vw; */
 }
+
+.name {
+  position: absolute;
+  width: 30vw;
+  font-size: 6vw;
+  font-family: 'Roboto Mono';
+}
+
+.nameSubtitle {
+  position: absolute;
+  top: 30vw;
+  left: 5vw;
+  width: 60vw;
+  font-size: 1.2vw;
+  display: none;
+  color: white;
+}
+
+#name {
+  top: 10vw;
+  left: 5vw;
+  color: white;
+}
+
+#nameShadow {
+  /* position: absolute;
+  top: 10.2vw;
+  left: 4.8vw; */
+  top: 10.8vw;
+  left: 4.2vw;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* #aboutMeContainer {
+  margin-top: 40vw;
+} */
 
 .green {
   color: rgb(44, 155, 44);
@@ -130,9 +169,17 @@ a.red:hover {
   border-radius: 1vw;
 }
 
-.projectSquare:hover {
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.19);
+.hoverable {
+  transition: 0.5s;
 }
+
+.hoverable:hover {
+  transform: translate(.3vw, -.2vw);
+}
+
+/* .projectSquare:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.19);
+} */
 
 .visitButton {
   margin-right: 1vw;

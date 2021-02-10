@@ -37,19 +37,20 @@
     </div>
   </nav>
   <div id="pt" class="ptsMainCanvas"></div>
-  <div class="mainContainer" id="aboutMeContainer">
+  <div id="nameShadow" class="name"></div>
+  <div id="name" class="name hoverable"></div>
+  <div id="mySite" class="nameSubtitle">(This is my frontend, not a template)</div>
+  <div class="mainContainer hoverable" id="aboutMeContainer">
     <div class="row commonTable">
       <div class="col-3 smallLeftSide">
         <div class="mainTitle">
           About me
           <br>
           <img src="src/marcos_salmon.png" id="marcosImg" class="circleImage">
-          <br>
-          <!-- <div class="caption mt-2">Nice to meet you!</div> -->
         </div>
       </div>
       <div class="col">
-        <div class="codeBlock" id="aboutMe">
+        <div class="codeBlock hoverable" id="aboutMe">
           <span class="green">// Dear employers: thanks for visiting!</span><br>
           <span class="darkBlue">let</span> <span class="lightBlue">aboutMe</span> = {<br>
           &emsp;<span class="lightBlue">name</span>: <span class="red">'Marcos Acosta'</span>,<br>
@@ -72,16 +73,16 @@
     </div>
   </div> 
 
-  <div class="mainContainer" id="projects">
+  <div class="mainContainer hoverable" id="projects">
     <div class="row commonTable">
       <div class="col smallLeftSide">
         <div class="mainTitle">
           Projects
         </div>
         
-        <div class="projectSquare">
+        <div class="projectSquare hoverable">
           <div class="cardTitle">
-            American Sign Language (ASL) Translation 🧏
+            Real-time American Sign Language (ASL) Recognition 🧏
           </div>
           <hr>
           <p>
@@ -110,14 +111,15 @@
           </p>
           <hr>
           <div class="centerContent">
-            <video autoplay loop muted id="workingVideo" class="cardImage">
+            <!-- <video autoplay loop muted id="workingVideo" class="cardImage">
               <source src="src/helloworld.mp4" type="video/mp4">
               Your browser does not support the video tag.
-            </video>
+            </video> -->
+            <img src="src/helloworld.png" class="cardImage">
           </div>
         </div>
 
-        <div class="projectSquare">
+        <div class="projectSquare hoverable">
           <div class="cardTitle">
             Metaschedule 🗓️
             <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/metaschedule" target="blank">
@@ -164,7 +166,7 @@
           </div>
         </div>
 
-        <div class="projectSquare">
+        <div class="projectSquare hoverable">
           <div class="cardTitle">
             P-ai <span class="text-muted">&&</span> Artificially Generated Jazz 🎷
             <a class="btn btn-light visitButton" href="https://medium.com/swlh/gpt-yes-and-it-can-play-jazz-too-2b5228ebb0d1" target="blank">
@@ -213,7 +215,7 @@
           </div>
         </div>
 
-        <div class="projectSquare">
+        <div class="projectSquare hoverable">
           <div class="cardTitle">
             Ampersand 🕹️
             <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/ampersand" target="blank">
@@ -313,14 +315,6 @@
       
 
       space.bindMouse().bindTouch().play();
-
-
-    
-      run( (time, ftime)  => {
-        let rect = Rectangle.fromCenter( new Pt([space.width / 2, 300]), 300 );
-        form.font(36, "","",1,"Almarai, sans-serif").fillOnly("#ffffff").alignText("center").paragraphBox( rect, "Hi! I'm Marcos.", 1.5, "middle" );
-      });
-
     })();
   </script>
 </body>
