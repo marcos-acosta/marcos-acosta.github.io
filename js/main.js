@@ -4,6 +4,7 @@ $(document).ready(function() {
     speed = 70
     typeWriter("name", txt, speed);
     typeWriter("nameShadow", txt, speed);
+    oscillateForward("name");
     setTimeout(() => {
       $("#mySite").fadeIn();
     }, txt.length * 70 + 500);
@@ -36,4 +37,14 @@ function typeWriter(id_, text_, speed_) {
   }
 
   write();
+}
+
+function oscillateForward(id) {
+  document.getElementById(id).style.transform = "translate(0.5vw, -1vw)";
+  setTimeout(() => {oscillateBack(id)}, 2000);
+}
+
+function oscillateBack(id) {
+  document.getElementById(id).style.transform = "translate(0px, 0px)";
+  setTimeout(() => {oscillateForward(id)}, 2000);
 }

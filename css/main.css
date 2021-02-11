@@ -47,8 +47,6 @@ canvas {
 .codeBlock {
   background-color: #ffffff;
   color: rgb(24, 24, 24);
-  /* background-color: #222222;
-  color: rgb(255, 255, 255); */
   padding: 2vw;
   font-family: "Roboto Mono";
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -57,7 +55,6 @@ canvas {
 
 #aboutMe {
   width: 100%;
-  /* margin-top: 6.5vw; */
 }
 
 .name {
@@ -65,6 +62,7 @@ canvas {
   width: 30vw;
   font-size: 6vw;
   font-family: 'Roboto Mono';
+  transition: 2s;
 }
 
 .nameSubtitle {
@@ -84,18 +82,11 @@ canvas {
 }
 
 #nameShadow {
-  /* position: absolute;
-  top: 10.2vw;
-  left: 4.8vw; */
   top: 10.8vw;
   left: 4.2vw;
   color: transparent;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  text-shadow: 0 0 7.5px rgba(0, 0, 0, 0.329);
 }
-
-/* #aboutMeContainer {
-  margin-top: 40vw;
-} */
 
 .green {
   color: rgb(44, 155, 44);
