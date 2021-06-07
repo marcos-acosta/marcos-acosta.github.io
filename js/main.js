@@ -1,50 +1,44 @@
-$(document).ready(function() {
-  setTimeout(() => {
-    txt = 'Hi! I\'m Marcos.'
-    speed = 70
-    typeWriter("name", txt, speed);
-    typeWriter("nameShadow", txt, speed);
-    oscillateForward("name");
-    setTimeout(() => {
-      $("#mySite").fadeIn();
-    }, txt.length * 70 + 500);
-  }, 1000)
-  $("#homeButton").on("click", () => {
-    $("#projectButton").removeClass("active");
-    $("#homeButton").addClass("active");
-    let projects = document.getElementById("aboutMeContainer")
-    projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+var page = 0;
+
+var pages = ["home", "projects", "resume", "misc"];
+
+$(document).ready(() => {
+  $("#helloGoogle").modal('show');
+  $(".menuItem").on("click", (e) => {
+    updatePage(e.target.id);
   });
-  $("#projectButton").on("click", () => {
-    $("#homeButton").removeClass("active");
-    $("#projectButton").addClass("active");
-    let projects = document.getElementById("projects")
-    projects.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  $("#dismissGoogle").on("click", () => {
+    $("#helloGoogle").modal('hide');
   });
 });
 
-function typeWriter(id_, text_, speed_) {
-  let i = 0;
-  let txt = text_;
-  let speed = speed_;
+function updatePage(id) {
+  newPage = pages.indexOf(id.slice(0, id.length - 4));
+  updateLinkText(newPage);
+  updatePageBody(newPage);
+  page = newPage;
+}
 
-  function write() {
-    if (i < txt.length) {
-      document.getElementById(id_).innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(write, speed);
+function updatePageBody(newPage) {
+  let oldBody = $(`#${pages[page]}Body`);
+  let newBody = $(`#${pages[newPage]}Body`);
+  oldBody.fadeOut(250, () => {
+    newBody.fadeIn(250);
+  });
+}
+
+function updateLinkText(newPage) {
+  let oldLink = $(`#${pages[page]}Link`);
+  oldLink.text(oldLink.text().slice(2));
+  for (let i = 0; i < pages.length; i++) {
+    let link = $(`#${pages[i]}Link`);
+    if (i == newPage) {
+      link.text(`➔ ${link.text()}`);
+      link.addClass('bold')
+      link.removeClass('pointerCursor')
+    } else {
+      link.removeClass('bold')
+      link.addClass('pointerCursor')
     }
   }
-
-  write();
-}
-
-function oscillateForward(id) {
-  document.getElementById(id).style.transform = "translate(0.5vw, -1vw)";
-  setTimeout(() => {oscillateBack(id)}, 2000);
-}
-
-function oscillateBack(id) {
-  document.getElementById(id).style.transform = "translate(0px, 0px)";
-  setTimeout(() => {oscillateForward(id)}, 2000);
 }

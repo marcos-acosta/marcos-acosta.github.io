@@ -10,309 +10,383 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- AOS -->
+  <link rel="stylesheet" href="js/aos/dist/aos.css" />
   <!-- Our CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main2.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
   <link rel="icon" href="src/cactus.png">
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark customNav">
-    <div class="navbar-brand"><b>&#60 Meet Marcos &#62</b></div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <div class="nav-item nav-link active pointerHover" id="homeButton">About Me</div>
-        <div class="nav-item nav-link pointerHover" id="projectButton">Projects</div>
-      </div>
-    </div>
-    <a class="btn btn-primary float-right visitButton" href="https://www.linkedin.com/in/marcos-acosta-949b3217a/" target="_blank">
-      <b>LinkedIn</b>
-    </a>
-    <a class="btn btn-light float-right visitButton" href="https://github.com/marcos-acosta" target="_blank">
-      GitHub
-    </a>
-  </nav>
-  <div id="pt" class="ptsMainCanvas"></div>
-  <div id="nameShadow" class="name"></div>
-  <div id="name" class="name"></div>
-  <div id="mySite" class="nameSubtitle">(This is my frontend, not a template)</div>
-  <div class="mainContainer hoverable" id="aboutMeContainer">
-    <div class="row commonTable">
-      <div class="col-3 smallLeftSide">
-        <div class="mainTitle">
-          About me
-          <br>
-          <img src="src/marcos_salmon.png" id="marcosImg" class="circleImage">
-        </div>
-      </div>
-      <div class="col">
-        <div class="codeBlock hoverable" id="aboutMe">
-          <span class="green">// Dear employers: thanks for visiting!</span><br>
-          <span class="darkBlue">let</span> <span class="lightBlue">aboutMe</span> = {<br>
-          &emsp;<span class="lightBlue">name</span>: <span class="red">'Marcos Acosta'</span>,<br>
-          &emsp;<span class="lightBlue">college</span>: <span class="red">'Harvey Mudd College'</span>,<br>
-          &emsp;<span class="lightBlue">major</span>: <span class="red">'Computer Science'</span>,<br>
-          &emsp;<span class="lightBlue">languages</span>: [<span class="red">'Python'</span>, <span class="red">'Java'</span>, <span class="red">'Javascript/Typescript/Node.js'</span>, <span class="red">'HTML/CSS'</span>, <span class="red">'C++'</span>],<br>
-          &emsp;<span class="lightBlue">blurb</span>:
-          `I suppose there's a lot that I could draw from my resume to put here, but the most fundamental thing to include, I believe, is
-          that I love to code. It started with programming Pong on my TI-84 calculator to pass the time in high school bio, then 
-          continued with CS courses, and by the time I wrote a rudimentary landmark-based "GPS" for freshmen navigating my high school, 
-          I knew CS was what I wanted to pursue. While I have a particular excitement for machine learning (given the progress it's 
-          seen in the past decades), I work hard to be up-to-date and proficient in other fields like web development, cloud computing 
-          (e.g. AWS), and front-end development. I showcase a couple of my favorite projects here for recruiters / employers. Please don't 
-          hesitate to reach out!`,<br>
-          &emsp;<span class="lightBlue">contact</span>: <span class="red">'<a class="red" href="mailto:mdacosta@g.hmc.edu">mdacosta@g.hmc.edu</a>'</span>
-          <br>
-          };
-        </div>
-      </div>
-    </div>
-  </div> 
-
-  <div class="mainContainer hoverable" id="projects">
-    <div class="row commonTable">
-      <div class="col smallLeftSide">
-        <div class="mainTitle">
-          Projects
-        </div>
-        
-        <div class="projectSquare hoverable">
-          <div class="cardTitle">
-            Real-time American Sign Language (ASL) Recognition 🧏
-          </div>
-          <hr>
-          <p>
-            Ever since I noticed the sign language alphabet on the last few pages of my student handbook sometime in fourth grade, 
-            learning ASL has been a lifelong goal of mine. About a decade later, I've finally come back to learn it. In a <i>eureka</i>
-            moment, I realized that I could develop two skills at once: ASL and ML. 
-          </p>
-          <p>
-            ASL translation has been picking up speed over the past few years, but the technology is still underdeveloped compared to
-            written/spoken language translation. Google has made perhaps the most significant progress, but given the fact that 
-            ASL involves subtle and rapid finger movement, body movement, facial expressions, and its own rules of grammar, it's by no 
-            means a closed problem. While I wouldn't claim to have the means to compete with a team of PhD-holding researchers at Google, I'm approaching the 
-            problem nonetheless because I believe ASL translation deserves more research and hacking. 
-          </p>
-          <p>
-            At the moment I'm using <a href="https://google.github.io/mediapipe/solutions/hands#python-solution-api" target="blank">Google's MediaPipe</a>
-            to perform the hand landmark detection, and at the moment I'm only training models on static, one-hand signs, like 24 of the 26 letters (J and Z require
-            motion). I experimented with both a neural network and a support vector classifier, and while I expected the SVC to outperform the NN due to the way SVMs
-            construct their decision boundaries, the SVC was actually more prone to confuse letters (e.g. E and O). That being said, I'll come back to 
-            the SVC to determine if further optimization could improve the results.
-          </p>
-          <p>
-            The next big step is to add a temporal aspect to the classification. This will be a huge shift, so I'll have to think very carefully about 
-            the architecture. A key issue would be determining when one sign stops and the next begins; native signers transition seamlessly between signs, 
-            much like we don't pause between words when we speak. So, I should look into how speech-to-text translation works for insight. I'll keep this page updated!
-          </p>
-          <hr>
-          <div class="centerContent">
-            <img src="src/helloworld.png" class="cardImage">
+  <div class="modal fade" id="helloGoogle" tabindex="-1" role="dialog" aria-labelledby="helloGoogleLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="helloGoogleLabel">A special welcome to
+            <span class="googleFont">
+              <span class="googleBlue">G</span><span class="googleRed">o</span><span class="googleYellow">o</span><span class="googleBlue">g</span><span class="googleGreen">l</span><span class="googleRed">e</span>!
+            </span>
+          </h5>
+          <div class="btn" id="dismissGoogle" aria-label="Close">
+            <span class="largerFont" aria-hidden="true">&times;</span>
           </div>
         </div>
-
-        <div class="projectSquare hoverable">
-          <div class="cardTitle">
-            Metaschedule 🗓️
-            <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/metaschedule" target="blank">
-              GitHub
-            </a>
-            <a class="btn btn-primary visitButton" href="http://metaschedule.netlify.com/" target="blank">
-              Website
-            </a>
-          </div>
-          <hr>
-          <p>
-            Metaschedule started as a frustration; namely, 
-            a frustration with how difficult it was to plan courses at my college consortium. There already exists a tool 
-            for course planning called <a href="https://hyperschedule.io" target="_blank">Hyperschedule</a>, but it requires
-            users to specify which section of a course they wanted to take. For many students (myself included), knowing which
-            sections to take to avoid conflicts <i>is</i> the problem, so Hyperschedule isn't particularly useful. If I had a 
-            nickel for every time my course registration plan was torn asunder by courses filling up at the last moment, I would 
-            have 20 cents.
-          </p>
-          <p>
-            Not enough to pay for laundry, but enough for me to make this scheduler tool that allows users to add courses they're
-            interested in and explore the different non-conflicting permutations of those courses' sections, as well as provide 
-            options for filtering specific sections and adding custom commitments. 
-          </p>
-          <p>
-            The course data comes from an <a href="https://hyperschedule.herokuapp.com/api/v3/courses?school=hmc" target="_blank">
-            API endpoint</a> provided by Hyperschedule, helpfully enough, so credit where credit is due :)
-          </p>
-          <p>
-            Developing Metaschedule taught me a <i>lot</i> about web development (and equally as much about what I still have to learn)
-            but, more importantly, it taught me that I can learn new and exciting skills by jumping in headfirst, asking around for help,
-            and getting feedback on where to improve. 
-          </p>
-          <p>
-            <i>Fun fact: at the bottom of the HTML file is an ASCII representation of my roommate.</i>
-          </p>
-          <hr>
-          <div class="centerContent">
-            
-            <video autoplay loop muted id="workingVideo" class="cardImage">
-              <source src="src/meta.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
-        <div class="projectSquare hoverable">
-          <div class="cardTitle">
-            P-ai <span class="text-muted">&&</span> Artificially Generated Jazz 🎷
-            <a class="btn btn-light visitButton" href="https://medium.com/swlh/gpt-yes-and-it-can-play-jazz-too-2b5228ebb0d1" target="blank">
-              Article
-            </a>
-            <a class="btn btn-dark visitButton" href="https://github.com/p-ai-org/p-jazz" target="blank">
-              GitHub
-            </a>
-            <a class="btn btn-primary visitButton" href="https://soundcloud.com/pjazz-marms" target="blank">
-              Soundcloud
-            </a>
-          </div>
-          <hr>
-          <p>
-            I joined <a href="https://www.p-ai.org/" target="blank">P-ai</a> as a freshman, the year it was founded. Its vision was to become the incubator for all things machine
-            learning at the consortium, and it's done exactly that. In my first year, I was accepted to a project team performing
-            sentiment analysis on Tweets about #WeWork and I took on a second project in the spring to help a senior with his research
-            on computationally lightweight facial recognition.
-          </p>
-          <p>
-            Coming into my freshman year, I had no experience with machine learning at all, which is why I spent a disproportionate
-            amount of my time on these projects, reading technical articles, attending machine learning workshops after class, and
-            working on side projects to get myself up to speed.
-          </p>
-          <p>
-            After my first year, I was invited to join the leadership team. In a promising new organization with over 100
-            members, joining the leadership has been both fast-paced and exciting, letting me take on a wide number of
-            responsibilities like hosting ML workshops, helping organize a career panel, overseeing our project teams, and
-            finding corporate partners.
-          </p>
-          <p>
-            Most personally interesting to me, I got to lead a project team of my own in generating artificial jazz! Dubbed p-jazz
-            (to match the theme), my team and I have been working on two different avenues of training models to replicate jazz piano
-            from MIDI files: splitting music into chunks (phrases) and training an encoder-decoder model to "translate" from one phrase
-            to the next, and finetuning GPT-2 to replicate the MIDI in text form.
-          </p>
-          <p>
-            The project is still ongoing, but our GitHub is here. We've also had some preliminary results (music), but we're
-            actively working on ideas for improvements, like training harmony and melody in tandem, and using transfer learning
-            from classical music to jazz. In any case, ML + music is a dream come true for me.
-          </p>
-          <hr>
-          <div class="centerContent">
-            <img src="src/5chack.jpg" class="cardImage">
-            <img src="src/working.png" class="cardImage">
-          </div>
-        </div>
-
-        <div class="projectSquare hoverable">
-          <div class="cardTitle">
-            Ampersand 🕹️
-            <a class="btn btn-dark visitButton" href="https://github.com/marcos-acosta/ampersand" target="blank">
-              GitHub
-            </a>
-            <a class="btn btn-primary visitButton" href="https://ampersand.netlify.app/" target="blank">
-              Website
-            </a>
-          </div>
-          <hr>
-          <p>
-            There actually isn't much to say for this one. Ampersand is a game I originally programmed on a school computer 
-            in my free time during a high school sophomore year Java course. At one point in college I found myself with a 
-            bit of free time again, so I figured, why not program it again, but on a nice frontend? And that's exactly what I 
-            did. Sometimes you just want to code, what can I say?
-          </p>
-          <hr>
-          <div class="centerContent">
-            <video autoplay loop muted id="workingVideo" class="cardImage">
-              <source src="src/amper.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <div class="modal-body p-4">
+          <i>Note from Marcos:</i><br>
+          I've only recently started revamping my portfolio website, so apologies if anything seems a bit patched-up at the moment. Thanks for visiting!
+          <img src="src/me_programming.jpg" class="modalImage">
+          <div class="modalImageCaption">
+            <i>Me, working on this site right now</i>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="customNavBar shadow over">
+    <ul class="noBullet">
+      <li class="inline bold monospace">&lt;MARCOS ACOSTA /&gt;</li>
+      <li class="inline bold menuItem" id="homeLink">➔ home / about</li>
+      <li class="inline pointerCursor menuItem" id="projectsLink">projects</li>
+      <li class="inline pointerCursor menuItem" id="resumeLink">resume / cv</li>
+      <li class="inline pointerCursor menuItem" id="miscLink">misc</li>
+      <li class="inline">
+        <a class="btn btn-dark navBarButton" href="https://github.com/marcos-acosta" target="blank">GitHub</a>
+      </li>
+      <li class="inline">
+        <a class="btn btn-primary navBarButton" href="https://www.linkedin.com/in/marcos-acosta-949b3217a/" target="blank">LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+  <div id="homeBody" class="mainBody">
+    <div class="hoverable">
+      <image class="mainImage shadow" src="src/marcos-bike.jpg">
+      <div class="mainImageCaption shadow">
+        <i>Fig 1.</i> Getting around on campus in style, on a budget. Requires one $50 bike from Craigslist and an LED strip (borrowed from roommate).
+      </div>
+    </div>
+    <div class="card mainTitle shadow hoverable roundedEdges">
+      <div class="veryBigText monospace centerText">
+        hey!<br>
+        <span class="yellowText">–</span><span class="blueText">–</span><span class="greenText">–</span><span class="redText">–</span><span class="carmineText">–</span>
+      </div>
+      <div>
+        I'm Marcos. Outside of coding, I love all things music– listening, jamming, etc., hanging out with my friends, and making new ones. If you're an employer (welcome), you probably want to hear more about the coding part though, so feel free to check out my projects!
+      </div>
+      <div class="codeBlock shadow hoverable roundedEdges">
+        <span class="redText">basic_info</span> = {<br>
+        &emsp;<span class="lightGrayText">name</span>: <span class="greenText">"Marcos Acosta"</span>,<br>
+        &emsp;<span class="lightGrayText">email</span>: <a href="mailto:macosta1625@gmail.com" target="blank" class="greenText">macosta1625@gmail.com</a>,<br>
+        &emsp;<span class="lightGrayText">college</span>: <span class="greenText">Harvey Mudd College"</span>,<br>
+        &emsp;<span class="lightGrayText">major</span>: <span class="greenText">"Computer Science"</span>,<br>
+        &emsp;<span class="lightGrayText">graduating</span>: <span class="greenText">"Spring 2023"</span>,<br>
+        &emsp;<span class="lightGrayText">languages</span>: [<span class="greenText">"Python"</span>, <span class="greenText">"Java"</span>, <span class="greenText">"Javascript"</span>, 
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="greenText">"Typescript"</span>, <span class="greenText">"C++"</span>, <span class="greenText">"Bash"</span>],<br>
+        &emsp;<span class="lightGrayText">hard_skills</span>: [<span class="greenText">"React"</span>, <span class="greenText">"Express"</span>, <span class="greenText">"SQL"</span>, 
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="greenText">"MongoDB"</span>, <span class="greenText">"Git"</span>, <span class="greenText">"Node.js"</span>],<br>
+        &emsp;<span class="lightGrayText">soft_skills</span>: [<span class="greenText">"Quick learning"</span>, <span class="greenText">"Communication"</span>]<br>
+        }
+      </div>
+    </div>
+    <div id="spotifyPlayer" class="card roundedEdges shadow hoverable">
+      Marcos's latest obsession
+      <hr>
+      <iframe src="https://open.spotify.com/embed/track/5ygk8Hkp4WCCk7GXWEUP9V" width="100%" height="80px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+  <div id="projectsBody" class="hidden mainBody">
+    <div class="projectPadding">
+      <div class="titleText">
+        Projects
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard greenBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Natural Number Registrar
+          </div>
+          <hr>
+          <p>
+            Spring 2021
+          </p>
+          <p>
+            <a class="whiteText" href="https://number-registrar.netlify.app/" target="blank">Website</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/num-registrar-backend" target="blank">Backend code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Natural Number Registrar</b></i></u>
+            <br>
+            <b>Uses:</b> Express | React | MondoDB | Node.js | passport.js | OAuth | Heroku | Netlify
+          </p>
+          <p>
+            <b>About |</b> Even before I knew how to write web pages, I had an ridiculously
+            simple idea for a web site. If you can sponsor a highway or an otter, why can't you
+            sponsor a number? A user can call dibs on one (and exactly one) number, and write a
+            message to leave their mark. The whole idea depends on user authentication and no
+            duplicate accounts, so I thought Facebook was the most logical choice. This project
+            was mostly for my own practice, but I do want to see the whole screen in color- I'll
+            see if I can start a trend...
+          </p>
+          <video autoplay loop muted class="projectCover higherProjectContent vanish">
+            <source src="src/registrar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard redBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            TEDify
+          </div>
+          <hr>
+          <p>
+            Spring 2021
+          </p>
+          <p>
+            <a class="whiteText" href="https://www.youtube.com/watch?v=VbxxvNJfpQY" target="blank">Demo (YouTube)</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/TEDify" target="blank">Code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>TEDify</b></i></u>
+            <br>
+            <b>Uses:</b> Tensorflow | Keras | Google Cloud | Selenium
+          </p>
+          <p>
+            <b>About |</b> This was, in a way, my "mad scientist"-type project of the year. I
+            thought it would be hilarious to have some program that could listen to human speech
+            and then play a cheesy 80s laughtrack whenever it detected humor. After chasing down
+            dozens of datasets and not being satisfied with them, I realized that TED Talks had
+            exactly what I needed: lots of data comprised of semi-formal, somewhat humorous,
+            non-topic-specific speech with clear transcriptions. To train the model, I used a 
+            modified Transformer for classification instead of seq2seq, and ran microphone input
+            through Google Cloud speech-to-text for the final product. Check out the demo!
+          </p>
+          <video autoplay loop muted class="projectCover higherProjectContent vanish">
+            <source src="src/tedify_short.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard carmineBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Synthetically Created Artwork from Music
+          </div>
+          <hr>
+          <p>
+            Spring 2021
+          </p>
+          <p>
+            <a class="whiteText" href="https://www.notion.so/Synthetically-Created-Artwork-from-Music-SCAM-b8e5e84550b842a8a3acce69f83e66b2" target="blank">Course paper (Notion)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Synthetically Created Artwork from Music (SCAM)</b></i></u>
+            <br>
+            <b>Uses:</b> Tensorflow | Keras | OpenCV | librosa (audio analysis) | Google Colab
+          </p>
+          <p>
+            <b>About |</b> I'd always wanted to get my hands dirty with GANs, and the opportunity
+            presented itself in my Computational Photography class. The idea: generate (low-res)
+            images inspired by music videos from certain genres. To keep things simple, I stuck
+            with three genres: alternative rock, pop, and rap. I then trained a conditional GAN (cGAN)
+            to generate images that could conceivably be from that a music video of that genre. Next 
+            step: generate images directly from the audio data, so we can transcend genre labels!
+            <br>
+            <i>Cover: generated images for alternative rock, pop, and rap, respectively.</i>
+          </p>
+          <img src="src/scam.png" class="projectCover higherProjectContent vanish">
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard yellowBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Iconicity in Sign Language Recognition
+          </div>
+          <hr>
+          <p>
+            Spring 2021
+          </p>
+          <p>
+            Code isn't on GitHub yet, but should be soon!
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Accounting for Visual Storytelling in Sign Language Recognition (SLR)</b></i></u>
+            <br>
+            <b>Uses:</b> Tensorflow | Keras | Google MediaPipe | OpenCV
+          </p>
+          <p>
+            <b>About |</b> Sign language is extremely expressive, creative, and highly contextual. In Google's
+            exploreCSR program at Brown, I researched how a translation model could analyze each
+            hand separately to understand "stories" that are <i>shown</i> with handshapes instead of told with
+            linear signs. Limiting the vocabulary, I trained an Encoder-Decoder LSTM to learn signs involving
+            two independent handshapes and a movement between them, and generalize with 88% accuracy to unseen
+            combinations. I could go on for way more than the 300px I have here, but- long story short- this 
+            project made me realize I want to work in a field where my code can make the software world more accessible.
+          </p>
+          <video autoplay loop muted class="projectCover vanish">
+            <source src="src/helloworld.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard blueBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Metaschedule
+          </div>
+          <hr>
+          <p>
+            Fall 2020
+          </p>
+          <p>
+            <a class="whiteText" href="https://metaschedule.netlify.app/" target="blank">Website</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/metaschedule" target="blank">Code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Metaschedule</b></i></u>
+            <br>
+            <b>Uses:</b> JS | JQuery | HTML | CSS | Netlify
+          </p>
+          <p>
+            <b>About |</b> Ah, course registration- my least favorite time of the semester. I like
+            the prospect of exciting new courses, but I <i>don't</i> like the stress of not knowing
+            which ones I might be able to get into, or having to prepare plans AA-ZZ in case a certain
+            section of one course gets filled up. To try to alleviate some of these issues, I made
+            Metaschule. It uses the API of an existing project (Hyperschedule) to group together different
+            sections of the same course, and then allow the user to see all non-conflicting permutations of
+            selected courses with seats available. I also felt compelled to rival Amazon's meowing duck,
+            so I included an ASCII-ified picture of my roommate at the bottom of the &lt;body&gt;.
+          </p>
+          <video autoplay loop muted class="projectCover vanish">
+            <source src="src/meta.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard greenBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Artificially Generated Jazz
+          </div>
+          <hr>
+          <p>
+            Fall 2020
+          </p>
+          <p>
+            <a class="whiteText" href="https://soundcloud.com/pjazz-marms" target="blank">Music (SoundCloud)</a>
+            <br>
+            <a class="whiteText" href="https://medium.com/swlh/gpt-yes-and-it-can-play-jazz-too-2b5228ebb0d1" target="blank">Article (Medium)</a>
+            <br>
+            <a class="whiteText" href="https://github.com/p-ai-org/p-jazz" target="blank">Code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Artificially Generated Jazz</b></i></u>
+            <br>
+            <b>Uses:</b> Tensorflow | Keras | MIDI
+          </p>
+          <p>
+            <b>About |</b> Having nearly decided to go to college to study music, I've always kept
+            my eyes out for a way to rope together computer science and CS. This was a project I led
+            at my college consortium's ML organization, P-ai, where we focused on generating jazz piano
+            using deep learning. As a team, we experimented with different ways of representing 
+            music (settling on a text format), and then applied NLP tools to model the "language"
+            of jazz. We found moderate success with an Encoder-Decoder LSTM for "translating" between musical phrases,
+            but it was child's play compared to what GPT-2 come up with when trained on our dataset (classic OpenAI).
+            Feel free to listen to some samples!
+          </p>
+          <img class="projectCover vanish" src="src/working.png">
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard carmineBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Ampersand
+          </div>
+          <hr>
+          <p>
+            Summer 2020
+          </p>
+          <p>
+            <a class="whiteText" href="https://ampersand.netlify.app/" target="blank">Website</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/ampersand" target="blank">Code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Ampersand</b></i></u>
+            <br>
+            <b>Uses:</b> JS | JQuery | HTML | CSS | Netlify
+          </p>
+          <p>
+            <b>About |</b> In 2016, a high school sophomore Marcos Acosta and his friend Owen McGee
+            sat in their Java class, having nothing to do after finishing the week's assignment. They–
+            we– came up with Ampersand, a turn-based game of logic and survival. At the time, it was 
+            programmed in Java using an ASCII board and the standard I/O library, but recently I felt
+            the need to give the old game a reboot. I'm usually not much of a gamer, but debugging a 
+            project has never been this addictive.
+          </p>
+          <video autoplay loop muted class="projectCover vanish">
+            <source src="src/amper.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="resumeBody" class="hidden mainBody">
+    <div class="bear">
+      ʕ•ᴥ•ʔ
+    </div>
+    <div class="subBearText">
+      @TODO: add resume!
+    </div>
+  </div>
+  <div id="miscBody" class="hidden mainBody">
+    <div class="bear">
+      ʕ•ᴥ•ʔ
+    </div>
+    <div class="subBearText">
+      @TODO: get miscellaneous!
+    </div>
+  </div>
 
+  <script src="js/aos/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- pts.js -->
-  <script src="js/pts.min.js"></script>
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  <!-- Our JS file -->
-  <script src="js/main.js"></script>
-
-  <script>
-    // let run = Pts.quickStart( "#pt", "#e7e4cf" );
-    let run = Pts.quickStart("#pt", "#fb7463");
-
-    //// Demo code starts (anonymous function wrapper is optional) ---
-
-    (function() {
-
-      let pts = new Group();
-
-      // Confetti extends Pt to implement custom logic and rendering
-      class Confetti extends Pt {
-        constructor( ...args ) {
-          super( ...args );
-          this.color = ["#85C1F5", "#fff", "#F4E770", "#7FCA9F", "#4A789C"][ Util.randomInt(5) ];
-          this.size = Math.random()*7+2;
-          this.angle = Math.random() * Const.two_pi;
-          this.dir = (Math.random() > 0.5) ? 1 : -1;
-          this.shape = ["rect", "circle", "tri"][ Util.randomInt(3) ];
-        }
-
-        render( form ) {
-          if (this.y < space.size.y) {
-            this.y += 2/this.size + Math.random();
-            this.x += Math.random() - Math.random();
-            this.angle += this.dir * (Math.random()*Const.one_degree + Const.one_degree);
-            
-            if (this.shape == "tri" || this.shape == "rect") {
-              let shape = (this.shape == "tri") ? Triangle.fromCenter(this, this.size) : Rectangle.corners(Rectangle.fromCenter(this, this.size*2));
-              shape.rotate2D( this.angle, this );
-              form.fillOnly(this.color).polygon( shape );
-            } else {
-              form.fillOnly(this.color).point( this, this.size, "circle" );
-            }
-          }
-        }
-      }
-
-
-      space.add({ 
-        animate: (time, ftime) => {
-          // remove confetti if reaching the bottom or too many
-          if (pts.length > 1000 || (pts.length > 0 && pts[0].y > space.size.y)) pts.shift();
-
-          // add a confetti every second
-          if ( Math.floor(time%1000) > 980 ) pts.push( new Confetti(space.pointer) );
-          
-          // render the confetti
-          pts.forEach( p => p.render(form) );
-        },
-
-        action:( type, px, py ) => {
-
-          // add a point to the line when mouse moves
-          if (type == "move") pts.push( new Confetti(px, py) );  
-        } 
-      });
-      
-      //// ----
-      
-
-      space.bindMouse().bindTouch().play();
-    })();
+  <!-- Our JS -->
+  <script src="js/main2.js"></script>
   </script>
+  </html>
 </body>
-</html>
