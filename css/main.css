@@ -305,7 +305,6 @@ li.inline {
   margin-left: 1vw;
   width: 100%;
   top: -4vw;
-  background-color: rgba(53, 53, 53);
 }
 
 .vanish {
@@ -326,4 +325,21 @@ li.inline {
 .projectRow {
   display: inline-block;
   width: 100%;
+}
+
+.loadingText {
+  background-color: rgba(53, 53, 53);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  height: 100%;
+  padding-top: 8vw;
+}
+
+.subtitleText {
+  width: 100%;
+  text-align: center;
 }
