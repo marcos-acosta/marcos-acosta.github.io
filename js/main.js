@@ -3,7 +3,7 @@ var page = 0;
 var pages = ["home", "projects", "resume", "misc"];
 
 $(document).ready(() => {
-  $("#helloGoogle").modal('show');
+  // $("#helloGoogle").modal('show');
   $(".menuItem").on("click", (e) => {
     updatePage(e.target.id);
   });
