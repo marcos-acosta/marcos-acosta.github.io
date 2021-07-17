@@ -7,9 +7,9 @@ $(document).ready(() => {
   $(".menuItem").on("click", (e) => {
     updatePage(e.target.id);
   });
-  $("#dismissGoogle").on("click", () => {
-    $("#helloGoogle").modal('hide');
-  });
+  // $("#dismissGoogle").on("click", () => {
+  //   $("#helloGoogle").modal('hide');
+  // });
 });
 
 function updatePage(id) {
