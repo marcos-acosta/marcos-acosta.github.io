@@ -343,3 +343,12 @@ li.inline {
   width: 100%;
   text-align: center;
 }
+
+.resumeContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.resume {
+  width: 60vw;
+}
