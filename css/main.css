@@ -322,6 +322,10 @@ li.inline {
   top: 0vw;
 }
 
+.lowerProjectContent {
+  top: -10vw;
+}
+
 .projectRow {
   display: inline-block;
   width: 100%;

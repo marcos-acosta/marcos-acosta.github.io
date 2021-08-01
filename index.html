@@ -10,8 +10,6 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <!-- AOS -->
-  <link rel="stylesheet" href="js/aos/dist/aos.css" />
   <!-- Our CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- Google Fonts -->
@@ -87,8 +85,8 @@
         &emsp;<span class="lightGrayText">graduating</span>: <span class="greenText">"Spring 2023"</span>,<br>
         &emsp;<span class="lightGrayText">languages</span>: [<span class="greenText">"Python"</span>, <span class="greenText">"Java"</span>, <span class="greenText">"Javascript"</span>, 
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="greenText">"Typescript"</span>, <span class="greenText">"C++"</span>, <span class="greenText">"Bash"</span>],<br>
-        &emsp;<span class="lightGrayText">hard_skills</span>: [<span class="greenText">"React"</span>, <span class="greenText">"Express"</span>, <span class="greenText">"SQL"</span>, 
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="greenText">"MongoDB"</span>, <span class="greenText">"Git"</span>, <span class="greenText">"Node.js"</span>],<br>
+        &emsp;<span class="lightGrayText">hard_skills</span>: [<span class="greenText">"React"</span>, <span class="greenText">"Express"</span>, <span class="greenText">"SQL/noSQL"</span>,
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="greenText">"ML/DL"</span>, <span class="greenText">"Git"</span>, <span class="greenText">"Node.js"</span>],<br>
         &emsp;<span class="lightGrayText">soft_skills</span>: [<span class="greenText">"Quick learning"</span>, <span class="greenText">"Communication"</span>]<br>
         }
       </div>
@@ -107,7 +105,45 @@
       <div class="subtitleText">
         <i>(Hover over a video / image to read more)</i>
       </div>
-      <hr><div class="projectRow">
+      <hr>
+      <div class="projectRow">
+        <div class="projectTitleCard blueBG shadow hoverable">
+          <div class="projectTitleCardTitle">
+            Ampersand Multiplayer
+          </div>
+          <hr>
+          <p>
+            Summer 2021
+          </p>
+          <p>
+            <a class="whiteText" href="https://ampersand-mp.netlify.app/" target="blank">Website</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/ampersand-multiplayer-frontend" target="blank">Frontend code (GitHub)</a>
+            <br>
+            <a class="whiteText" href="https://github.com/marcos-acosta/ampersand-multiplayer-backend" target="blank">Backend code (GitHub)</a>
+          </p>
+        </div>
+        <div class="projectCard shadow hoverable">
+          <p>
+            <u><i><b>Ampersand Multiplayer</b></i></u>
+            <br>
+            <b>Uses:</b> Express | React | Websockets | MongoDB | Node.js | Heroku | Netlify
+          </p>
+          <p>
+            <b>About |</b> I used to half-jokingly refer to Ampersand as a "minimalist turn-based logic puzzle survival game", but
+            now I can add yet another adjective to the list: "multiplayer". I used Socket.io to maintain an open-door connection
+            so that players could relay their moves to the server, and the server could reply to both players with an updated room
+            state (rendered with React). A global leaderboard is stored with MongoDB and accessed via the backend (at the time of 
+            writing, the high score is held by my sister and me). If any of my friends are reading this– thanks for helping me beta test!
+          </p>
+          <div class="vanish">
+            <div class="loadingText"></div>
+            <img src="src/ampersand-mp.jpg" class="projectCover vanish lowerProjectContent">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="projectRow">
         <div class="projectTitleCard yellowBG shadow hoverable">
           <div class="projectTitleCardTitle">
             Carrot in a Box
@@ -137,10 +173,10 @@
             Websockets and Socket.IO, I had just been shown a clip from the British game show <i>8 Out of 10 Cats</i> where the host
             introduced a game called "Carrot in a Box". The rules are simple: "there are two of you, but only one carrot" 
             (see YouTube link on left). What follows is the most hands-off social deduction game I've ever seen, and I loved it. With
-            this web app, users can create a room and compete against a friend, with spectators allowed as well. Try it out!
+            this web app, users can create a room and compete against a friend, with spectators allowed as well.
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img src="src/carrot.png" class="projectCover higherProjectContent vanish">
           </div>
         </div>
@@ -177,7 +213,7 @@
             see if I can start a trend...
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img src="src/registrar.png" class="projectCover higherProjectContent vanish">
           </div>
         </div>
@@ -215,7 +251,7 @@
             through Google Cloud speech-to-text for the final product. Check out the demo!
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img src="src/tedify.png" class="projectCover higherProjectContent vanish">
           </div>
         </div>
@@ -246,10 +282,11 @@
             images inspired by music videos from certain genres. To keep things simple, I stuck
             with three genres: alternative rock, pop, and rap. I then trained a conditional GAN (cGAN)
             to generate images that could conceivably be from that a music video of that genre. Next 
-            step: generate images directly from the audio data, so we can transcend genre labels!
+            step: generate images directly from the audio data, so we can transcend genre labels...
             <br>
             <i>Cover: generated images for alternative rock, pop, and rap, respectively.</i>
           </p>
+          <div class="loadingText"></div>
           <img src="src/scam.png" class="projectCover higherProjectContent vanish">
         </div>
       </div>
@@ -283,7 +320,7 @@
             project made me realize I want to work in a field where my code can make the software world more accessible.
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img src="src/hw1.png" class="projectCover vanish">
           </div>
         </div>
@@ -321,7 +358,7 @@
             so I included an ASCII-ified picture of my roommate at the bottom of the &lt;body&gt;.
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <video autoplay loop muted class="projectCover">
               <source src="src/meta.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -364,7 +401,7 @@
             Feel free to listen to some samples!
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img class="projectCover" src="src/working.png">
           </div>
         </div>
@@ -400,7 +437,7 @@
             project has never been this addictive.
           </p>
           <div class="vanish">
-            <div class="loadingText">loading content...</div>
+            <div class="loadingText"></div>
             <img src="src/amper.png" class="projectCover vanish">
           </div>
         </div>
@@ -421,14 +458,9 @@
       ʕ•ᴥ•ʔ
     </div>
     <div class="subBearText">
-      @TODO: get miscellaneous!
+      @TODO: get miscellaneous
     </div>
   </div>
-
-  <script src="js/aos/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Bootstrap -->
